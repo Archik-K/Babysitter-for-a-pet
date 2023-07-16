@@ -1,0 +1,76 @@
+[
+	{
+		"name": "Мария",
+		"pet": "кошки",
+		"keyWords": [
+			"кошки",
+			"Савеловский",
+			"всё включено",
+			"С выездом",
+			"На дому"
+		],
+		"area": "Савеловский",
+		"experience": 1,
+		"salary": "1000",
+		"age": "27",
+		"sex": "female",
+		"food": "всё включено",
+		"jobFormat": ["С выездом", "На дому"],
+		"photo": "src/pictures/nanny5.jpeg",
+		"id": "0"
+	},
+	{
+		"name": "Дарья",
+		"pet": "собаки",
+		"keyWords": ["собаки", "Люберцы", "всё включено", "С выездом", "На дому"],
+		"area": "Люберцы",
+		"experience": 2,
+		"salary": "2000",
+		"age": "34",
+		"sex": "female",
+		"food": "всё включено",
+		"jobFormat": ["С выездом", "На дому"],
+		"photo": "src/pictures/nanny4.png",
+		"id": "1"
+	},
+	{
+		"name": "Вера",
+		"pet": "морские свинки",
+		"keyWords": [
+			"морские свинки",
+			"Бибирево",
+			"со своей едой",
+			"С выездом",
+			"На дому"
+		],
+		"area": "Бибирево",
+		"experience": 5,
+		"salary": "1500",
+		"age": "29",
+		"sex": "female",
+		"food": "со своей едой",
+		"jobFormat": ["С выездом", "На дому"],
+		"photo": "https://i0.wp.com/squeakdreams.com/wp-content/uploads/2020/11/Me.jpg?w=800&ssl=1",
+		"id": "2"
+	},
+	{
+		"name": "Анна",
+		"pet": "попугаи",
+		"keyWords": [
+			"попугаи",
+			"Бибирево",
+			"со своей едой",
+			"С выездом",
+			"На дому"
+		],
+		"area": "Войковский",
+		"experience": 9,
+		"salary": "600",
+		"age": "35",
+		"sex": "female",
+		"food": "со своей едой",
+		"jobFormat": ["С выездом", "На дому"],
+		"photo": "src/pictures/nanny3.jpeg",
+		"id": "3"
+	}
+]

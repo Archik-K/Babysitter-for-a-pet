@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Nixie+One&family=Rubik:wght@300;500&display=swap");
+p,
+ul {
+  font-size: 1rem;
+  line-height: 2.4rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+}
+
+ul {
+  margin-left: 3rem;
+}
+ul li {
+  position: relative;
+  line-height: 2.6rem;
+}
+ul li:after {
+  position: absolute;
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 576 512' width='100' title='star'%3E%3Cpath fill='rgba(255,255,255,0.6)' d='M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 1.2rem;
+  height: 1.2rem;
+  top: 5px;
+  left: -2rem;
+}
+
+.pipe {
+  padding: 0 1rem;
+}
+
+.bold {
+  font-weight: 500;
+}
+
+@media only screen and (min-width: 800px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    grid-gap: 1rem;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.card {
+  height: 40vh;
+  width: 21vw;
+  background: rgba(107, 194, 90, 0.2117647059);
+  border-radius: 3rem;
+  overflow: hidden;
+}
+@media only screen and (max-width: 800px) {
+  .card {
+    margin-bottom: 4rem;
+  }
+}
+.card .image {
+  position: relative;
+}
+.card .image img {
+  display: block;
+  width: 100%;
+}
+.card .image .note {
+  position: absolute;
+  font-family: "Nixie One", cursive;
+  border-top-left-radius: 1rem;
+  right: 0;
+  bottom: 0;
+  padding: 8px 1.3rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  background: rgb(78, 13, 0);
+  color: #7e7100;
+}
+.card__content {
+  padding: 1rem 1rem;
+}
+.card__content p:not(.list-label) {
+  margin-bottom: 1rem;
+}
+.card__content ul {
+  margin-bottom: 2rem;
+}
+.card__content .list-label {
+  margin-top: 2rem;
+}
+.card__content .bold {
+  font-weight: 400;
+}
+.card h2,
+.card h3,
+.card p,
+.card ul {
+  color: rgb(78, 13, 0);
+}
+.card h2,
+.card h3 {
+  font-family: "Nixie One", cursive;
+}
+.card h2 {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid rgb(78, 13, 0);
+  padding-bottom: 0.5rem;
+  line-height: 2.2rem;
+}
+@media only screen and (max-width: 600px) {
+  .card h2 {
+    font-size: 1rem;
+    line-height: 2.4rem;
+  }
+}
+.card h3 {
+  max-width: 60%;
+  font-size: 1.8rem;
+  margin: 2.5rem 0 1rem;
+  line-height: 2.8rem;
+}
+.card .add-ons {
+  border: 1px solid rgba(78, 13, 0, 0.3);
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+}
+
+@media only screen and (min-width: 800px) {
+  .cards_2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    grid-gap: 1rem;
+    z-index: 7;
+  }
+}
+@media only screen and (min-width: 1100px) {
+  .cards_2 {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.card_2 {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  height: 32vh;
+  width: 21vw;
+  background: rgba(107, 194, 90, 0.2117647059);
+  border-radius: 3rem;
+  overflow: hidden;
+}
+@media only screen and (max-width: 800px) {
+  .card_2 {
+    margin-bottom: 4rem;
+  }
+}
+.card_2 .image {
+  position: relative;
+}
+.card_2 .image img {
+  display: block;
+  width: 100%;
+}
+.card_2 .image .note {
+  position: absolute;
+  font-family: "Nixie One", cursive;
+  border-top-left-radius: 1rem;
+  right: 0;
+  bottom: 0;
+  padding: 8px 1.3rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  background: rgb(78, 13, 0);
+  color: #7e7100;
+}
+.card_2__content {
+  padding: 1rem 1rem;
+}
+.card_2__content p:not(.list-label) {
+  margin-bottom: 1rem;
+}
+.card_2__content ul {
+  margin-bottom: 2rem;
+}
+.card_2__content .list-label {
+  margin-top: 2rem;
+}
+.card_2__content .bold {
+  font-weight: 400;
+}
+.card_2 h2,
+.card_2 h3,
+.card_2 p,
+.card_2 ul {
+  color: rgb(78, 13, 0);
+}
+.card_2 h2,
+.card_2 h3 {
+  font-family: "Nixie One", cursive;
+}
+.card_2 h2 {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid rgb(78, 13, 0);
+  padding-bottom: 0.5rem;
+  line-height: 2.2rem;
+}
+@media only screen and (max-width: 600px) {
+  .card_2 h2 {
+    font-size: 1rem;
+    line-height: 2.4rem;
+  }
+}
+.card_2 h3 {
+  max-width: 60%;
+  font-size: 1.8rem;
+  margin: 2.5rem 0 1rem;
+  line-height: 2.8rem;
+}
+.card_2 .add-ons {
+  border: 1px solid rgba(78, 13, 0, 0.3);
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+}
+
+.btn {
+  background: hsl(var(--hue), 98%, 80%);
+  border: none;
+  border-radius: 21px;
+  cursor: pointer;
+  color: black;
+  font: 600 1.05rem/1 "Nunito", sans-serif;
+  letter-spacing: 0.05em;
+  overflow: hidden;
+  padding: 1em 2.5em;
+  min-height: 1.3em;
+  position: relative;
+  text-transform: lowercase;
+}
+.btn--yellow {
+  --hue: 46;
+}
+.btn--green {
+  --hue: 163;
+}
+.btn--purple {
+  --hue: 244;
+}
+.btn--red {
+  --hue: 0;
+}
+.btn--blue {
+  --hue: 210;
+}
+.btn:active, .btn:focus {
+  outline: 3px solid hsl(calc(var(--hue) + 90), 98%, 80%);
+}
+.btn + .btn {
+  margin-top: 2.5em;
+}
+.btn__txt {
+  position: relative;
+  z-index: 2;
+}
+.btn__bg {
+  background: hsl(var(--hueBg), 98%, 80%);
+  border-radius: 50%;
+  display: block;
+  height: 0;
+  left: 50%;
+  margin: -50% 0 0 -50%;
+  padding-top: 100%;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: scale(0);
+  transform-origin: 50% 50%;
+  transition: transform 0.175s cubic-bezier(0.5, 1, 0.89, 1);
+  z-index: 1;
+}
+.btn__bg:nth-of-type(1) {
+  --hueBg: calc(var(--hue) - 90);
+  transition-delay: 0.1725s;
+}
+.btn__bg:nth-of-type(2) {
+  --hueBg: calc(var(--hue) - 180);
+  transition-delay: 0.115s;
+}
+.btn__bg:nth-of-type(3) {
+  --hueBg: calc(var(--hue) - 270);
+  transition-delay: 0.0575s;
+}
+.btn__bg:nth-of-type(4) {
+  --hueBg: calc(var(--hue) - 360);
+  transition-delay: 0s;
+}
+.btn:hover .btn__bg, .btn:focus .btn__bg, .btn:active .btn__bg {
+  transform: scale(1.5);
+  transition: transform 0.35s cubic-bezier(0.11, 0, 0.5, 0);
+}
+.btn:hover .btn__bg:nth-of-type(1), .btn:focus .btn__bg:nth-of-type(1), .btn:active .btn__bg:nth-of-type(1) {
+  transition-delay: 0.115s;
+}
+.btn:hover .btn__bg:nth-of-type(2), .btn:focus .btn__bg:nth-of-type(2), .btn:active .btn__bg:nth-of-type(2) {
+  transition-delay: 0.23s;
+}
+.btn:hover .btn__bg:nth-of-type(3), .btn:focus .btn__bg:nth-of-type(3), .btn:active .btn__bg:nth-of-type(3) {
+  transition-delay: 0.345s;
+}
+.btn:hover .btn__bg:nth-of-type(4), .btn:focus .btn__bg:nth-of-type(4), .btn:active .btn__bg:nth-of-type(4) {
+  transition-delay: 0.46s;
+}/*# sourceMappingURL=app.css.map */
