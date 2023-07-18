@@ -1,0 +1,59 @@
+consumes:
+  - multipart/form-data
+parameters:
+  - name: photo
+    type: file
+    in: formData
+    required: true
+  - name: name
+    type: string
+    example: "Alice"
+    in: formData
+    required: true
+  - name: animal
+    type: string
+    enum:
+      - cat
+      - dog
+      - parrot
+      - guinea_pig
+    example: "cat"
+    in: formData
+    required: true
+  - name: birthday
+    type: string
+    example: "2022-02-22"
+    in: formData
+    required: true
+  - name: place
+    type: string
+    example: "Voronezh"
+    in: formData
+    required: true
+  - name: rate
+    type: integer
+    example: 500
+    in: formData
+    required: true
+  - name: practice
+    type: integer
+    example: 2
+    in: formData
+    required: true
+  - name: contact
+    type: string
+    example: "https://t.me/AlxOtsu"
+    in: formData
+    required: true
+  - name: about
+    type: string
+    in: formData
+
+responses:
+  200:
+    schema:
+     "$ref": "#/definitions/Nanny"
+  400:
+    schema:
+      type: string
+      example: "File must be an image."

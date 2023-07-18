@@ -1,0 +1,14 @@
+parameters:
+  - name: path
+    in: path
+    required: true
+
+responses:
+  200:
+    schema:
+      type: file
+      format: binary
+  404:
+    schema:
+      type: string
+      example: "File is not found, or you don't have access"
