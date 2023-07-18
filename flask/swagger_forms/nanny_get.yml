@@ -1,0 +1,73 @@
+definitions:
+  Nanny:
+    type: object
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
+        example: "Alice"
+      animal:
+        type: string
+        example: "cat"
+      photo:
+        type: string
+        example: "http://localhost:5000/file/nanny-photo-0"
+      birthday:
+        type: string
+        example: "2022-02-22"
+      place:
+        type: string
+        example: "Voronezh"
+      rate:
+        type: integer
+        example: 500
+      practice:
+        type: integer
+        example: 2
+      contact:
+        type: string
+        example: "https://t.me/AlxOtsu"
+      about:
+        type: string
+
+parameters:
+  - name: page
+    type: integer
+    in: query
+  - name: page_size
+    type: integer
+    in: query
+  - name: max_practice
+    type: integer
+    in: query
+  - name: min_practice
+    type: integer
+    in: query
+  - name: min_rate
+    type: integer
+    in: query
+  - name: max_rate
+    type: integer
+    in: query
+  - name: animal
+    type: string
+    enum:
+      - cat
+      - dog
+      - parrot
+      - guinea_pig
+    in: query
+  - name: place
+    type: string
+    in: query
+
+
+
+# place animal min_practice min_rate max_rate page page_size
+responses:
+  200:
+    schema:
+      type: array
+      items:
+        "$ref": "#/definitions/Nanny"
