@@ -50,7 +50,7 @@ parameters:
     in: formData
 
 responses:
-  200:
+  201:
     schema:
      "$ref": "#/definitions/Nanny"
   400:
