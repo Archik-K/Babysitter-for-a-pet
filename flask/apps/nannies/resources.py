@@ -30,7 +30,8 @@ class NannyResource(Resource):
         page_size = int(request.args.get("page_size", 5))
         offset = (page - 1) * page_size
 
-        query.offset(offset).limit(page_size)
+        query = query.offset(offset)
+        query = query.limit(page_size)
         nannies = query.all()
         res = [nanny.serialize() for nanny in nannies]
         return res, 200
