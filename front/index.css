@@ -310,6 +310,10 @@ a.navigation__link_2:hover:after {
 		border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
 	}
 }
+
+.image_nanny {
+	margin: 2px 3px 17px 0;
+}
 /* ____________FOOTER__________ */
 
 .client_pain {
