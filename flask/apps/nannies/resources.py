@@ -8,7 +8,7 @@ from .models import Nanny, db
 
 
 class NannyResource(Resource):
-    method_decorators = (decorators.exception_catcher_decorator,)
+    method_decorators = (decorators.exception_catcher_decorator, decorators.cors_decorator)
 
     @swag_from(Config.SWAGGER_FORMS + "nanny_get.yml")
     def get(self):

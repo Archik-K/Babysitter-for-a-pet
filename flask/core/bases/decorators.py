@@ -1,3 +1,5 @@
+from flask import Response
+from flask import request
 from .exceptions import BaseServerException
 from core import Config
 
@@ -20,3 +22,10 @@ def _handle_exception(e):
         raise e
     else:
         return BaseServerException().to_response()
+
+
+def cors_decorator(method):
+    def inner(*args, **kwargs):
+        response = method(*args, **kwargs)
+        return *response, {'Access-Control-Allow-Origin': request.origin}
+    return inner
