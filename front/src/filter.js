@@ -22,7 +22,7 @@ function searchResult(element) {
 }
 
 document.addEventListener("DOMContentLoaded", async function () {
-	let url = "/src/nanies.json"; //"./src/nanies.json";
+	let url = "./src/nanies.json"; //"./src/nanies.json";
 	let response = await fetch(url);
 	cards = await response.json();
 	firstCards = cards;
