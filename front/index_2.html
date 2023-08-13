@@ -75,68 +75,42 @@
 		нетерпением ждем вашего вступления в наше волшебное комьюнити нянь для домашних питомцев!🤗</p>
 		</div>
 		</div>
-		<form class="form2">
-		<div class="registration-form" id="registration-forms_yakor">
-		<div class="registration-form-header-container">
-		<h2 class="registration-form-header">Оформить заявку "Стать няней"</h2>
-		</div>
-		<div class="mb-3">
-		<label for="nameForm" class="form-label" >Имя</label>
-		<input	type="name"	class="form-control"	id="nameForm"	placeholder="Ваше имя"/>
-		</div>
-		<input class="image_nanny" type="file" placeholder="Image" />
-		<select class="form-select mb-3" aria-label=".form-select-lg example">
-		<option selected>Выберите за кем будете ухаживать</option>
-		<option value="1">Котейка</option>
-		<option value="2">Пёсель</option>
-		<option value="3">Морская свинка</option>
-		<option value="4">Хомячок</option>
-		<option value="5">Змеюк</option>
-		<option value="6">Павук</option>
-		<option value="7">Лисичка</option>
-		<option value="8">Суррикат</option>
-		</select>
-		<div class="mb-3">
-		<label for="phoneForm" class="form-label">Телефон</label>
-		<input	type="tel"	class="form-control" id="phoneForm"	placeholder="+79012345678"/>
-		</div>
-		<div class="mb-3">
-		<label class="form-label">Предпочтительный способ связи</label>
-		<div class="form-check">
-		<input class="form-check-input"	type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
-		<label class="form-check-label" for="flexRadioDefault1">Мобильная связь</label>
-		</div>
-		<div class="form-check">
-		<input class="form-check-input"	type="radio"	name="flexRadioDefault"	id="flexRadioDefault2"	checked/>
-		<label class="form-check-label" for="flexRadioDefault2">Мессенджер</label>
-		</div>
-		</div>
-		<div class="input-group mb-3">
-		<span class="input-group-text" id="basic-addon1">@</span>
-		<input	type="text"	class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"/>
-		</div>
-		<div class="mb-3">
-		<label for="emailForm" class="form-label">Email</label>
-		<input	type="email" class="form-control" id="emailForm" placeholder="name@example.com"/>
-		</div>
-		<div class="mb-3">
-		<p>Укажите свою дату рождения: <input type="date" name="calendar" /></p>
-		</div>
-		<div class="mb-3">
-		<label for="commentsForm" class="form-label">Дополнительно</label>
-		<textarea class="form-control" id="commentsForm"
-		rows="3" placeholder="Любая дополнительная информация, которую нам необходимо знать. Опишите опыт работы, если он имеется."></textarea>
-		</div>
-		<div class="registration-form-button-container">
-		<button type="button" class="btn btn--yellow" id="sending_a_babysitter_questionnaire">
-		<span class="btn__txt">Отправить</span>
-		<i class="btn__bg" aria-hidden="true"></i>
-		<i class="btn__bg" aria-hidden="true"></i>
-		<i class="btn__bg" aria-hidden="true"></i>
-		<i class="btn__bg" aria-hidden="true"></i>
-		</button>
-		</div>
-		</div>
+		<form class="form2" id="post_nanny" enctype="multipart/form-data">
+			<br>
+			<label for="photo" >Фото</label>
+			<input type="file" name="photo" id="photo">
+			<br>
+			<label for="name" >Имя</label>
+			<input type="text" name="name" id="name">
+			<br>
+			<select class="form-select mb-3" aria-label=".form-select-lg example" name="animal">
+				<option selected>Выберите за кем будете ухаживать</option>
+				<option value="cat">Котейка</option>
+				<option value="dog">Пёсель</option>
+				<option value="guinea_pig">Морская свинка</option>
+				<option value="parrot">Пепуг</option>
+			</select>
+			<br>
+			<label for="birthday" >День рождения</label>
+			<input type="date" name="birthday" id="birthday">
+			<br>
+			<label for="place" >Район</label>
+			<input type="text" name="place" id="place">
+			<br>
+			<label for="rate" >Цена</label>
+			<input type="number" name="rate" id="rate">
+			<br>
+			<label for="practice" >Опыт</label>
+			<input type="number" name="practice" id="practice">
+			<br>
+			<label for="contact" >Контакт</label>
+			<input type="text" name="contact" id="contact">
+			<br>
+			<label for="about" >О себе</label>
+			<input type="text" name="about" id="about">
+			<br>
+			<button id="post_nanny_button">POST</button>
+
 		</form>
 		<div id="result"></div>
 		</main>
