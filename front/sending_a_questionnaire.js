@@ -1,15 +1,20 @@
-function sendDataToServer(data) {
+async function sendDataToServer(data) {
+	const formData = new FormData();
+
+	for (const name in data) {
+		formData.append(name, data[name]);
+	}
+
 	// Опции для POST-запроса
 	const requestOptions = {
 		method: "POST",
 		headers: {
 			"Content-Type": "application/json",
 		},
-		body: JSON.stringify(data),
+		body: formData,
 	};
-
 	// Выполняем POST-запрос с помощью Fetch API
-	fetch("http://localhost:5000/nanny", requestOptions)
+	await fetch("http://localhost:5000/nanny", requestOptions)
 		.then((response) => {
 			if (!response.ok) {
 				throw new Error("Ошибка запроса: " + response.status);
@@ -44,7 +49,6 @@ document
 		const email = document.getElementById("emailForm").value;
 		const birthDate = document.querySelector('input[name="calendar"]').value;
 		const additionalComments = document.getElementById("commentsForm").value;
-
 		// Создаем объект для отправки данных
 		const data = {
 			name,
@@ -57,7 +61,6 @@ document
 			birthDate,
 			additionalComments,
 		};
-
 		// Выполняем POST-запрос
 		sendDataToServer(data);
 	});
