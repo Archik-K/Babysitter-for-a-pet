@@ -1,13 +1,15 @@
-const host = "http://localhost:5000/"
-const post_nanny_form = document.getElementById("post_nanny")
+const host = "http://localhost:5000/";
+const post_nanny_form = document.getElementById("post_nanny");
+const button = document.querySelector("#post_nanny_button");
 
-function post_nanny(){
+function post_nanny() {
 	fetchOptions = {
 		method: "POST",
-		body: new FormData(post_nanny_form)
-	}
+		body: new FormData(post_nanny_form),
+	};
 
-	fetch(host + "nanny", fetchOptions).then((response) => {
+	fetch(host + "nanny", fetchOptions)
+		.then((response) => {
 			if (!response.ok) {
 				throw new Error("Ошибка запроса: " + response.status);
 			}
@@ -22,10 +24,13 @@ function post_nanny(){
 			// Обработка ошибки
 			console.error(error.message);
 		});
-
 }
 
-post_nanny_form.addEventListener('submit', post_nanny);
+post_nanny_form.addEventListener("submit", (event) => {
+	event.preventDefault();
+});
+
+button.addEventListener("click", post_nanny);
 
 // Осталось сделать
 // Обработка результатов запроса (10 строка)
