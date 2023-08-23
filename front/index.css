@@ -360,7 +360,6 @@ a.navigation__link_2:hover:after {
 .form2 {
 	display: flex;
 	width: 80%;
-	height: 100vh;
 	margin: 0%;
 }
 
@@ -368,7 +367,6 @@ a.navigation__link_2:hover:after {
 	margin: 100px auto 0 auto;
 	padding: 1%;
 	width: 70%;
-	height: 80%;
 	background-color: #f7f9f2;
 }
 
